@@ -1,0 +1,12 @@
+form "My Form"
+section "User Info"
+field "username" label "Username" type "text" validate required
+field "email" label "Email" type "email"
+field "password" label "Password" type "password" validate required pattern ".{6,}"
+field "age" label "Age" type "number" validate min "18" max "99"
+field "dob" label "Date of Birth" type "date" validate min "1900-01-01" max "2023-12-31" required
+field "gender" label "Gender" type "radio" validate options "Male,Female,Other"
+field "bio" label "Bio" type "textarea" validate rows "5" cols "30"
+field "resume" label "Upload Resume" type "file" validate accept ".jpeg,.pdf,.doc,.docx"
+field "subscribe" label "Subscribe to Mails" type "dropdown" validate options "weekly,Monthly"
+end
